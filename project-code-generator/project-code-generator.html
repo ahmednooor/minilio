@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <style>
+        body {
+            width: 65%;
+            margin: auto;
+            font-family: sans-serif;
+            background-color: white;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 0 0 2em 0;
+        }
+        
+        h1 {
+            display: block;
+            margin: 0.5em auto;
+            text-align: center;
+            font-family: sans-serif;
+            color: tomato;
+            font-weight: normal;
+        }
+        
+        input {
+            width: 30%;
+            display: block;
+            background-color: white;
+            color: black;
+            border: 2px solid tomato;
+            outline: 0;
+            font-size: 1em;
+            padding: 0.6em 0.8em;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+        
+        textarea {
+            width: 70%;
+            font-family: sans-serif;
+            display: block;
+            background-color: white;
+            color: black;
+            border: 2px solid tomato;
+            outline: 0;
+            font-size: 1em;
+            padding: 0.6em 0.8em;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+        
+        button {
+            display: block;
+            margin: 0.5em auto;
+            background-color: limegreen;
+            color: white;
+            border: none;
+            font-size: 2em;
+            padding: 0.5em 0.8em;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -o-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+        
+        button:hover {
+            cursor: pointer;
+            background-color: forestgreen;
+        }
+        
+        p {
+            display: block;
+            color: black;
+            text-align: left;
+            font-family: sans-serif;
+            font-weight: bold;
+            font-size: 1em;
+        }
+        
+        #description {
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Enter your project data and click Generate.</h1>
+
+<p>Enter the name of your project folder which you have created in the work directory. #NOTE: It is case sensitive and do not use spaces when naming the project folders. Instead use underscores like this: Sample_Project or This_is_a_project etc.</p>
+<input id="project_name" type="text" placeholder="Project Folder Name" autocomplete="off">
+<p>Enter the title of your project. This will be the heading of your project too, so you can use spaces, letters and numbers here.</p>
+<input id="project_title" type="text" placeholder="Project Title" autocomplete="off">
+<p>Enter the catagory in which your work falls like, graphic design, photography, UI design etc. You can use spaces, letters and numbers here.</p>
+<input id="project_catagory" type="text" placeholder="Project Catagory" autocomplete="off">
+<p>Enter the name of your client. You can use spaces, letters and numbers here.</p>
+<input id="client" type="text" placeholder="Client Name" autocomplete="off">
+<p>Enter the date of your project like, 1st Jan 2016. You can use your own format of date too and you can use spaces, letters and numbers here.</p>
+<input id="date" type="text" placeholder="Project Date" autocomplete="off">
+<p>Enter the description and other details of your work. You can use spaces, letters and numbers here. You can press enter to separate lines or paragraphs in this section that means you do not have to manually add the line breaks for this section in the generated code.</p>
+<textarea id="description" type="text" placeholder="Project Description And Other Details" rows="8" autocomplete="off" wrap="hard"></textarea>
+<p>How many images are there in your project? Write in numbers not letters like 1 instead of one.</p>
+<input id="images" type="text" placeholder="Number Of Images" autocomplete="off">
+<p>Specify the format of your images. If your images are .jpg, write (jpg) without brackets and if your images are .png, write (png) without brackets. #NOTE: Do not type a dot with jpg or png here.</p>
+<input id="format" type="text" placeholder="Image Format" autocomplete="off">
+
+<button onclick="generateCode()">Generate</button>
+
+<script>
+function generateCode() {
+    var project_name = document.getElementById("project_name").value;
+    var project_title = document.getElementById("project_title").value;
+    var project_catagory = document.getElementById("project_catagory").value;
+    var client = document.getElementById("client").value;
+    var date = document.getElementById("date").value;
+    var description = document.getElementById("description").value.replace(/\n/g, "<br/>");
+    var images = document.getElementById("images").value;
+    var format = document.getElementById("format").value;
+    var imagesint = parseInt(images);
+    var numbers;
+    {
+        document.write( 
+"&lt;!--*********************************************************************************************************--&gt;<br>" +
+"&lt;!--Project Start*****Project Start*****Project Start*****Project Start--&gt;<br>" +
+"&lt;!--       Project Name : " + project_name + "--&gt;<br>" +
+        
+        "&lt;a href=&quot;#project_" + project_name + "&quot; id=&quot;project_" + project_name + "_close&quot; class=&quot;project&quot;&gt;<br>" +
+            "&lt;div class=&quot;project-cover-container&quot;&gt;<br>" +
+                "&lt;img class=&quot;project-cover-image&quot; src=&quot;work/" + project_name + "/cover.jpg&quot; alt=&quot;Project Cover Image&quot;&gt;<br>" +
+                "&lt;div class=&quot;project-cover-overlay&quot;&gt;<br>" +
+                "&lt;h3 class=&quot;project-title&quot;&gt;" + project_title + "&lt;br&gt;&lt;span class=&quot;project-title-description&quot;&gt;" + project_catagory + "&lt;/span&gt;&lt;/h3&gt;<br>" +
+                "&lt;/div&gt;<br>" +
+            "&lt;/div&gt;<br>" +
+        "&lt;/a&gt;<br>" +
+        
+        "&lt;div id=&quot;project_" + project_name + "&quot; class=&quot;overlay&quot;&gt;<br>" +
+            "&lt;div class=&quot;popup&quot;&gt;<br>" +
+                "&lt;a href=&quot;#project_" + project_name + "_close&quot;&gt;<br>" +
+                    "&lt;svg class=&quot;close&quot; version=&quot;1.1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; x=&quot;0px&quot; y=&quot;0px&quot; viewbox=&quot;0 0 288 288&quot; enable-background=&quot;new 0 0 288 288&quot; xml:space=&quot;preserve&quot;&gt;                    &lt;polygon points=&quot;288,0 283.8,0 144,139.8 4.2,0 0,0 0,4.2 139.8,144 0,283.8 0,288 4.2,288 144,148.2 283.8,288 288,288 288,283.8 148.2,144 288,4.2 &quot;/&gt; &lt;/svg&gt;<br>" +
+                "&lt;/a&gt;<br>" +
+                "&lt;div class=&quot;popup-content&quot;&gt;<br>" +
+                    "&lt;h1&gt;" + project_title + "&lt;/h1&gt;<br>" +
+                    "&lt;div class=&quot;project-details&quot;&gt;<br>" +
+                    "&lt;h4&gt;Client: &lt;br&gt;&lt;span&gt;" + client + "&lt;/span&gt;&lt;/h4&gt;<br>" +
+                    "&lt;h4&gt;Date: &lt;br&gt;&lt;span&gt;" + date + "&lt;/span&gt;&lt;/h4&gt;<br>" +
+                    "&lt;h4&gt;Project Type: &lt;br&gt;&lt;span&gt;" + project_catagory + "&lt;/span&gt;&lt;/h4&gt;<br>" +
+                    "&lt;/div&gt;<br>" +
+
+                    "&lt;h4 class=&quot;project-description-heading&quot;&gt;Description:&lt;/h4&gt;<br>" +
+                    "&lt;p class=&quot;" + "project-description" + "&quot;&gt;" + description + "&lt;/p&gt;<br>" +
+                    "&lt;div class=&quot;project-images-container&quot;&gt;<br>");
+        for (numbers = 1; numbers <= imagesint; numbers++) {
+            document.write("&lt;a href=&quot;work/" + project_name + "/" + numbers + "." + format + "&quot;&gt;&lt;img src=&quot;work/" + project_name + "/" + numbers + "." + format + "&quot; alt=&quot;" + numbers + "&quot;&gt;&lt;/a&gt;<br>");
+        } }
+    document.write("&lt;/div&gt; &lt;!--.project-images-container End--&gt;<br>" + 
+                
+                "&lt;/div&gt; &lt;!--.popup-content End--&gt;<br>" + 
+
+                "&lt;a href=&quot;#project_" + project_name + "_close&quot; class=&quot;button&quot;&gt;Close&lt;/a&gt;<br>" +
+
+            "&lt;/div&gt; &lt;!--.popup End--&gt;<br>" +
+        "&lt;/div&gt; &lt;!--.overlay End--&gt;<br>" +
+        
+        
+"&lt;!--Project End*****Project End*****Project End*****Project End--&gt;<br>" +
+"&lt;!--*********************************************************************************************************--&gt;<br>");
+}
+
+</script>
+
+</body>
+</html>

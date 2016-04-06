@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,900italic,800italic,900,100,100italic,200italic,200,300,300italic,400italic,500,500italic,600,600italic,700,700italic,800" rel="stylesheet" type="text/css">
+    <title>Minilio Documentation</title>
+    <style>
+        *,
+        *:before,
+        *:after {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Raleway", Helvetica, Arial, "Lucida Grande", sans-serif;
+            min-width: 1024px;
+            width: 100%;
+            margin: auto;
+            position: relative;
+            background-color: whitesmoke;
+        }
+
+        img {
+            max-width: 98%;
+        }
+
+        p {
+            line-height: 1.4em;
+            color: #505050;
+        }
+
+        .sidebar a {
+            color: #505050;
+            font-weight: bold;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .sidebar a:hover {
+            color: #ff6347
+        }
+
+        .sidebar h1,
+        .sidebar h2 {
+            color: #ff6347;
+        }
+
+        .sidebar ul {
+            margin-left: -0.8em;
+        }
+
+        li {
+            list-style: circle;
+            margin: 0.5em auto;
+            display: block;
+            -webkit-transition: all 0.2s ease-in-out;
+            -moz-transition: all 0.2s ease-in-out;
+            -o-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .sidebar {
+            width: 23%;
+            height: 100%;
+            position: fixed;
+            overflow-y: scroll;
+            overflow-x: auto;
+            float: left;
+            background-color: ;
+            padding: 0 1.4em;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            background-color: whitesmoke;
+        }
+
+        .how-to {
+            width: 76%;
+            height: 100vh;
+            overflow-y: scroll;
+            overflow-x: auto;
+            padding: 0 1.8em;
+            float: right;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            background-color: whitesmoke;
+        }
+
+        .how-to hr {
+            margin: 4em auto;
+            border: 1px dotted #ff6347;
+        }
+
+        .how-to h1,
+        h2 {
+            color: #ff6347;
+        }
+
+        .hdng {
+            color: #ff6347;
+            text-decoration: none;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .hdng:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="sidebar">
+
+        <h1><a class="hdng" href="documentation.html">Documentation\</a></h1>
+
+        <h2>Side/Navigation Bar:</h2>
+        <ul>
+        <li><a href="#colors">Change Colors</a></li>
+        <li><a href="#favicon">Change Favicon</a></li>
+        <li><a href="#title">Change Site Title</a></li>
+        <li><a href="#logo">Change Logo</a></li>
+        <li><a href="#intro">Change And Edit The Intro</a></li>
+        <li><a href="#social-icons-1">Edit Social Icons In Side/Navigation Bar</a></li>
+        <li><a href="#copyright">Edit Copyright</a></li>
+        </ul>
+       
+       
+        <h2>About Page:</h2>
+        <ul>
+        <li><a href="#profile">Change The Profile Image</a></li>
+        <li><a href="#myself">Edit About Myself Paragraph</a></li>
+        <li><a href="#what-i-do">Hide What I Do Icons</a></li>
+        <li><a href="#skills">Edit Skills</a></li>
+        </ul>
+        
+        
+        <h2>Contact Page</h2>
+        <ul>
+        <li><a href="#contact-icons">Edit/Hide Contact Info And Contact Icons</a></li>
+        <li><a href="#social-icons-2">Edit Social Icons In Contact Page</a></li>
+        <li><a href="#form">Hide The Form</a></li>
+        <li><a href="#email">Add Your Email In mailer.php</a></li>
+        <li><a href="#add-project"><h3>Add A Project Using Code Generator</h3></a></li>
+        <li><a href="for-developers.html"><h3>For Developers</h3></a></li>
+        </ul>
+        
+
+    </div>
+    
+    <div class="how-to">
+        
+        <h1>Guide Lines:</h1>
+        <p>Don't <b>delete</b> or <b>change</b> anything within <b>&lt;</b> and <b>&gt;</b> <b>characters</b> unless asked to do so.</p>
+        <p>Don't <b>delete</b> any <b>main parts of the template,</b> like icons and other things. Always <b>comment</b> them by adding <b>&lt;!--</b> at the start and <b>--&gt;</b> at the end of the code for that section.</p>
+        <p>You should <b>use a text editor specifically built for coding.</b> You can use basic notepad type editor but don’t curse me afterwards. So better to use a nice code editor. There are some pretty <b>awesome code editors</b> which you can use for free like <b>Brackets, Atom, Notepad++ and Sublime Text 2.</b> I am using <b>Brackets</b> for this tutorial.</p>
+        <p>When I say <b>open index.html or minilio.css</b> that means to <b>open</b> that file in the <b>code editor (usually by right clicking).</b></p>
+        
+        <hr>
+        
+        <h2 id="colors">Change Colors:</h2>
+        <p>
+            <b>The Template has three categories of colors:<br><br>Primary Color: #ff6347 (Tomato)<br>Secondary Color: #000000 (Black)<br>Background Color: #ffffff (White)</b>
+        </p>
+        <p>To Change Colors first open <b>minilio.css</b> in the <b>css folder.</b><br>I am changing primary color for this example. Same procedure will apply for other colors too.<br><b>NOTE: Don’t choose same colors for two or all categories. That way you won’t be able to change them separately afterwards.</b></p>
+        <p>1. Press <b>Ctrl+f</b> and type the code of the color you want to replace like this,</p>
+        <img src="template-customization/color-change-1.jpg" alt="">
+        <p>2. Press <b>Ctrl+h</b> and type the code of your desired color like this,</p>
+        <img src="template-customization/color-change-2.jpg" alt="">
+        <p>3. <b>Click Batch…</b> and it will ask for reconfirmation.</p>
+        <img src="template-customization/color-change-3.jpg" alt="">
+        <p>4. <b>Click Replace</b> and done.</p>
+        <img src="template-customization/color-change-4.jpg" alt="">
+        
+        <hr>
+        
+        <h2 id="favicon">Change Favicon:</h2>
+        <p>Just replace the <b>favicon.png</b> file in <b>img</b> folder with your own <b>favicon.png</b> file.</p>
+        
+        <hr>
+        
+        <h2 id="title">Change Site Title:</h2>
+        <p>Open <b>index.html</b> and press <b>Ctrl+f</b> and type <b>&lt;title&gt;</b>. Remove Minilio and type your Site Title.</p>
+        <img src="template-customization/site-title.jpg" alt="">
+        
+        <hr>
+        
+        <h2 id="logo">Change Logo:</h2>
+        <p>Just replace <b>logo.png</b> file in <b>img</b> folder with your own <b>logo.png</b> file.</p>
+        
+        <hr>
+        
+        <h2 id="intro">Change And Edit The Intro:</h2>
+            <p>There are two types of Intro. <b>Paragraphical Intro</b> and <b>Name and Job Description only Intro</b> which is hidden by default. <br>Paragraphical Intro is the default one. If you want the Name and Job Description only Intro do the following.
+        </p>
+        <p>In <b>index.html</b> press <b>Ctrl+f</b> and type <b>class="intro"</b> like this,</p>
+        <img src="template-customization/intro-1.jpg" alt="">
+        <p>Now <b>comment</b> it by adding <b>&lt;!--</b> at the start and <b>--&gt;</b> at the end of the line. like this,</p>
+        <img src="template-customization/intro-2.jpg" alt="">
+        <p>Now Press <b>Ctrl+f</b> and type <b>class="intro-name"</b> like this,</p>
+        <img src="template-customization/intro-3.jpg" alt="">
+        <p>And remove <b>&lt;!--</b> from the start and <b>--&gt;</b> from the end of the line. Like this,</p>
+        <img src="template-customization/intro-4.jpg" alt="">
+        <p>And done.</p>
+        <img src="template-customization/intro-5.jpg" alt="">
+        <p>To Edit the Intro, in <b>index.html</b> replace <b>Minilio</b> with <b>your name</b> and <b>Static Portfolio Template</b> with <b>your Job Desicription</b>. And If you have chosen the paragraphical intro same will apply there and you can change the rest of the text too. <b>(don’t change anything that is in between <b>&lt;!--</b> and <b>--&gt;</b> characters)</b></p>
+        
+        <hr>
+        
+        <h2 id="social-icons-1">Edit Social Icons In Side/Navigation Bar:</h2>
+        <p>The social icons on the side/navigation bar are inside a <b>div</b> with <b>class="important-social-links"</b>. So you can press <b>Ctrl+f</b> and type <b>class="important-social-links"</b> to find the div.</p>
+        <p>To <b>hide</b> the icons you don’t need, just <b>comment</b> them like this,</p>
+        <img src="template-customization/social-icons-1.jpg" alt="">
+        <p>To add your <b>social links</b> in their respective icons, add your social link between <b>inverted</b> commas in <b>&lt;a href=""</b> like this, <b>&lt;a href=https://facebook.com/username</b> </p>
+        <img src="template-customization/social-icons-2.jpg" alt="">
+        
+        <h2 id="copyright">Edit Copyright:</h2>
+        <p>In <b>index.html</b> press <b>Ctrl+f</b> and type <b>class="copyright"</b> then edit the <b>copyright</b> text like this,</p>
+        <img src="template-customization/copyright.jpg" alt="">
+        
+        <hr>
+        
+        <h1>About Page:</h1>
+        
+        <h2 id="profile">Change The Profile Image:</h2>
+        <p>Just replace <b>profile.png</b> file in <b>img</b> folder with your <b>own profile.png</b> file.</p>
+        
+        <hr>
+        
+        <h2 id="myself">Edit About Myself Paragraph:</h2>
+        <p>In <b>index.html</b> press <b>Ctrl+f</b> and type <b>class="about-me"</b> and remove the <b>lorem ipsum</b> paragraph and write your <b>bio.</b> <b>(don’t change anything that is in between <b>&lt;!--</b> and <b>--&gt;</b> characters)</b></p>
+        <img src="template-customization/about-myself-paragraph.jpg" alt="">
+        
+        <hr>
+        
+        <h2 id="what-i-do">Hide What I Do Icons:</h2>
+        <p>If you want to <b>hide</b> any of the <b>three</b> <b>What I Do</b> icons. In <b>index.html</b> press <b>Ctrl-f</b> and type <b>class="what-i-do"</b>. All three icons and their texts are in their respective <b>divs</b>. So to hide any of them, just <b>comment</b> the <b>whole</b> div by adding a <b>&lt;!--</b> at the start and <b>--&gt;</b> at the <b>end</b> of the div like this,</p>
+        <img src="template-customization/what-i-do.jpg" alt="">
+        
+        <hr>
+        
+        <h2 id="skills">Edit Skills:</h2>
+        <p>In <b>index.html</b> press <b>Ctrl+f</b> and type <b>class="skills"</b> like this,</p>
+        <img src="template-customization/skills.jpg" alt="">
+        <p>Now if you want to <b>delete</b> any of the <b>skills</b> just <b>delete its complete line or comment it.</b> And if you want to <b>add</b> more <b>skills</b> then <b>duplicate an existing line</b> and <b>edit</b> the text in it.</p>
+        
+        <hr>
+        
+        <h1>Contact Page:</h1>
+        
+        <h2 id="contact-icons">Edit/Hide Contact Info And Contact Icons:</h2>
+        <p>In <b>index.html</b> press <b>Ctrl+f</b> and type <b>class="contact-details"</b> like this,</p>
+        <img src="template-customization/contact-icons.jpg" alt="">
+        <p>Now for hiding, <b>comment</b> the <b>whole div</b> like we did in <b>What I Do Section.</b> To Edit the Text <b>replace</b> the pre added text between <b>&lt;h3&gt;</b> and <b>&lt;/h3&gt;</b> tags with your text. <b>(don’t change anything that is in between <b>&lt;!--</b> and <b>--&gt;</b> characters)</b></p>
+        
+        <hr>
+        
+        <h2 id="social-icons-2">Edit Social Icons In Contact Page:</h2>
+        <p>The procedure to hide the <b>unwanted</b> social icons or adding the social links to respective icons is the <b>same</b> as of the <b>social icons in side/navigation bar.</b> Now to <b>navigate</b> to the section for <b>social icons in contact page</b>, in <b>index.html</b> press <b>Ctrl+f</b> and type <b>class="social"</b> like this,</p>
+        <img src="template-customization/social-icons-contact-page.jpg" alt="">
+        <p>Rest is the <b>same</b> as for the <b>social icons in side/navigation bar.</b></p>
+        
+        <hr>
+        
+        <h2 id="form">Hide The Form:</h2>
+        <p>In <b>index.html</b> press <b>Ctrl+f</b> and type <b>id="ajax-contact"</b> and <b>comment</b> the <b>whole form tag</b> like this,</p>
+        <img src="template-customization/form.jpg" alt="">
+        
+        <hr>
+        
+        <h2 id="email">Add Your Email In mailer.php</h2>
+        <p>Open <b>mailer.php</b> in code editer. <b>mailer.php</b> is <b>located</b> in <b>php folder.</b></p>
+        <p>Now goto <b>line number 23</b> and replace <b>hello@example.com</b> with <b>your email ID</b> where you want to recieve contact form messages. like this,</p>
+        <img src="template-customization/mailer.jpg" alt="">
+        <p><b>Don't remove double commas.</b></p>
+        
+        <hr>
+        
+        <h1 id="add-project">Add A Project Using Code Generator:</h1>
+        <p><b>NOTE:</b> To get rid of all demo projects when setting up the template. Just delete all project folders in the <b>work</b> folder and delete <b>all code</b> between <b>&lt;div class="portfolio"&gt;</b> and <b>&lt;/div&gt;</b> tags. <b>Remember</b> don't delete the tags themselves, only the code between them.</p>
+        <p>Now to <b>add</b> a <b>new project,</b> <b>follow</b> the <b>procedure</b> below.</p>
+        <p><b>1.</b> In the <b>work folder</b> of the template, <b>create a folder</b> for your <b>project.</b><br><b>NOTE: It is case sensitive and do not use spaces when naming the project folders. Instead use underscores like this: Sample_Project or This_is_a_project etc.</b></p>
+        <img src="project-addition/1.jpg" alt="">
+        <p><b>2.</b> Now <b>add your project images</b> and <b>name them numerically in the ascending order</b> and <b>create a square image file</b> for your project cover image and <b>name it cover.jpg.</b> Like this,</p>
+        <img src="project-addition/2.jpg" alt="">
+        <p><b>3.</b> Now <b>open the code generator</b> and <b>fill in your project details</b> like this,</p>
+        <img src="project-addition/3.jpg" alt="">
+        <p><b>4.</b> Now <b>click generate and copy paste the generated code into your portfolio div.</b> For that, open <b>Index.html</b> and press <b>Ctrl+f</b> and type <b>class="portfolio"</b> and <b>paste the generated code between &lt;div class="portfolio"&gt; and &lt;/div&gt;</b> like this,</p>
+        <img src="project-addition/4.jpg" alt="">
+        
+        <hr>
+        
+        
+    </div>
+    
+</body>
+</html>
