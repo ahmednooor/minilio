@@ -29,7 +29,7 @@
 
 > **Firefox** and **Chrome** on **Android** are Supported.
 
->  You can test the it on various devices specially **Apple** and **Nexus** devices and share your results in **issues tracker.** Thanks.
+>  You can test it on various devices specially **Apple** and **Nexus** devices and share your results in **issues tracker.** Thanks.
 
 ## Folder Structure:
 
@@ -43,11 +43,11 @@
 
 > Contact Icons by [Elyounssi Wahib](https://www.iconfinder.com/Wahib)
 
-> Social Icons by [Alexis Doreau](https://www.alexisdoreau.com/)
+> Social Icons by [Alexis Doreau](http://www.alexisdoreau.com)
 
 > [lightGallery](https://github.com/sachinchoolur/lightGallery) by [sachinchoolur](https://github.com/sachinchoolur)
 
-> Images from [unsplash.com](unsplash.com)
+> Images from [unsplash.com](https://unsplash.com)
 
 > [AJAX Contact Form](http://blog.teamtreehouse.com/create-ajax-contact-form) by [Matt West](http://blog.teamtreehouse.com/author/mattwest)
 
