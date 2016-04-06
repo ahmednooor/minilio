@@ -1,6 +1,8 @@
 # MINILIO
 > **Minilio** is an easy to use **Responsive Static Portfolio Template.**
 
+[Live Demo](http://ahmednooor.github.io/minilio/index.html)
+
 ![screenshot](https://raw.githubusercontent.com/ahmednooor/minilio/master/screenshot.png)
 
 ## Features:
