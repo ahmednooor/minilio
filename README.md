@@ -8,6 +8,8 @@
 
 > Modular.
 
+> Responsive.
+
 > Project Code Generator Included.
 
 > Comprehensive Visual Based Documentation.
@@ -15,8 +17,6 @@
 > Hand Coded.
 
 > Vanilla CSS.
-
-> Responsive.
 
 > SVG icons.
 
